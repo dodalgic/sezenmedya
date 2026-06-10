@@ -55,7 +55,6 @@ $imSettings['search']['general'] = array(
 		'64' => 'metin-karakter-sayici.html',
 		'65' => 'buyuk-kucuk-harf-cevirici.html',
 		'66' => 'alt-alta-kelimeleri-yan-yana-yazma-araci.html',
-		'68' => 'site-haritasi.html',
 		'70' => 'enpara-hesap-acma-rehberi.html',
 		'71' => 'turknet-1-ay-ucretsiz-internet-firsati.html',
 		'72' => 'sigortam-net-500-tl-indirim-firsati.html',
