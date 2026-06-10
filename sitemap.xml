@@ -343,12 +343,6 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://dodalgic.github.io/sezenmedya/site-haritasi.html</loc>
-		<lastmod>2026-06-10</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
 		<loc>https://dodalgic.github.io/sezenmedya/enpara-hesap-acma-rehberi.html</loc>
 		<lastmod>2026-06-10</lastmod>
 		<changefreq>monthly</changefreq>
