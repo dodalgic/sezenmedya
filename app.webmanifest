@@ -14,10 +14,10 @@
 "sizes": "192x192"
 }
 ],
-"id": "/?source=pwa",
-"start_url": "/?source=pwa",
+"id": "/sezenmedya/?source=pwa",
+"start_url": "/sezenmedya/?source=pwa",
 "display": "standalone",
-"scope": "/",
+"scope": "/sezenmedya/",
 "background_color": "#7092BE",
 "theme_color": "#7092BE",
 "lang": "tr-TR",
