@@ -45,7 +45,7 @@ if (!$data['valid']) {
 		<link rel="stylesheet" href="../style/style.css?2026-2-2-0" media="screen,print" />
 		<link rel="stylesheet" href="../style/template.css?2026-2-2-0" media="screen" />
 		<link rel="stylesheet" href="../pluginAppObj/imHeader_pluginAppObj_04/style.css" media="screen, print" />
-		<link rel="stylesheet" href="../blog/style.css?2026-2-2-0-639167218044003774" media="screen,print" />
+		<link rel="stylesheet" href="../blog/style.css?2026-2-2-0-639167271680104138" media="screen,print" />
 		<script src="../res/jquery.js?2026-2-2-0"></script>
 		<script src="../res/x5engine.js?2026-2-2-0" data-files-version="2026-2-2-0"></script>
 		<script src="../res/pwa.js?2026-2-2-0" defer ></script>		<script src="../res/x5engine.elements.js?2026-2-2-0"></script>
@@ -60,7 +60,7 @@ if (!$data['valid']) {
 			x5engine.utils.currentPagePath = 'blog/index.php';
 			x5engine.boot.push(function () { x5engine.imPageToTop.initializeButton({}); });
 		</script>
-		<link rel="icon" href="../favicon.png?2026-2-2-0-639167218043646073" type="image/png" />
+		<link rel="icon" href="../favicon.png?2026-2-2-0-639167271679884257" type="image/png" />
 		<link rel="alternate" type="application/rss+xml" title="" href="../blog/x5feed.php" />
 		<link rel="manifest" href="../app.webmanifest?2026-2-2-0" /><?php
 $blogBaseUrl = $imSettings['general']['url'] . 'blog/';
@@ -548,7 +548,7 @@ Turknet 1 Ay Ücretsiz İnternet Fırsatı		</a>
 Sigortam.net 500 TL İndirim Fırsatı		</a>
 </div>
 </div>
-	</li></ul></li><li class="imMnMnMiddle imLevel" data-link-hash="297419284"><div class="label-wrapper"><div class="label-inner-wrapper"><a href="../blog/" class="label">Blog</a></div></div></li><li class="imMnMnMiddle imLevel"><div class="label-wrapper"><div class="label-inner-wrapper"><span class="label">Hakkımızda </span><button type="button" class="screen-reader-only clear-button-style toggle-submenu" aria-label="Alt menüyü göster Hakkımızda " aria-expanded="false" onclick="if ($(this).attr('aria-expanded') == 'true') event.stopImmediatePropagation(); $(this).closest('.imLevel').trigger(jQuery.Event($(this).attr('aria-expanded') == 'false' ? 'mouseenter' : 'mouseleave', { originalEvent: event } ));">▼</button></div></div><ul data-original-position="open-bottom" class="open-bottom" style="" >
+	</li></ul></li><li class="imMnMnMiddle imLevel" data-link-hash="297419284"><div class="label-wrapper"><div class="label-inner-wrapper"><a href="../blog/" class="label">Blog</a></div></div></li><li class="imMnMnLast imLevel"><div class="label-wrapper"><div class="label-inner-wrapper"><span class="label">Hakkımızda </span><button type="button" class="screen-reader-only clear-button-style toggle-submenu" aria-label="Alt menüyü göster Hakkımızda " aria-expanded="false" onclick="if ($(this).attr('aria-expanded') == 'true') event.stopImmediatePropagation(); $(this).closest('.imLevel').trigger(jQuery.Event($(this).attr('aria-expanded') == 'false' ? 'mouseenter' : 'mouseleave', { originalEvent: event } ));">▼</button></div></div><ul data-original-position="open-bottom" class="open-bottom" style="" >
 	<li class="imMnMnFirst imPage" data-link-paths=",/sezenmedya/hakkimizda-iletisim.html">
 <div class="label-wrapper">
 <div class="label-inner-wrapper">
@@ -563,14 +563,7 @@ Hakkımızda &amp; İletişim		</a>
 Reklam &amp; Sponsorlar		</a>
 </div>
 </div>
-	</li></ul></li><li class="imMnMnLast imPage" data-link-paths=",/sezenmedya/site-haritasi.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="../site-haritasi.html">
-Site Haritası		</a>
-</div>
-</div>
-	</li></ul></nav></div><a id="imHeader_imMenuObject_02_after_menu" class="screen-reader-only-even-focused"></a><!-- UNSEARCHABLE END --><script>
+	</li></ul></li></ul></nav></div><a id="imHeader_imMenuObject_02_after_menu" class="screen-reader-only-even-focused"></a><!-- UNSEARCHABLE END --><script>
 var imHeader_imMenuObject_02_settings = {
 	'menuId': 'imHeader_imMenuObject_02',
 	'responsiveMenuEffect': 'none',
@@ -986,7 +979,7 @@ Turknet 1 Ay Ücretsiz İnternet Fırsatı		</a>
 Sigortam.net 500 TL İndirim Fırsatı		</a>
 </div>
 </div>
-	</li></ul></li><li class="imMnMnMiddle imLevel" data-link-hash="297419284"><div class="label-wrapper"><div class="label-inner-wrapper"><a href="../blog/" class="label">Blog</a></div></div></li><li class="imMnMnMiddle imLevel"><div class="label-wrapper"><div class="label-inner-wrapper"><span class="label">Hakkımızda </span><button type="button" class="screen-reader-only clear-button-style toggle-submenu" aria-label="Alt menüyü göster Hakkımızda " aria-expanded="false" onclick="if ($(this).attr('aria-expanded') == 'true') event.stopImmediatePropagation(); $(this).closest('.imLevel').trigger(jQuery.Event($(this).attr('aria-expanded') == 'false' ? 'mouseenter' : 'mouseleave', { originalEvent: event } ));">▼</button></div></div><ul data-original-position="open-bottom" class="open-bottom" style="" >
+	</li></ul></li><li class="imMnMnMiddle imLevel" data-link-hash="297419284"><div class="label-wrapper"><div class="label-inner-wrapper"><a href="../blog/" class="label">Blog</a></div></div></li><li class="imMnMnLast imLevel"><div class="label-wrapper"><div class="label-inner-wrapper"><span class="label">Hakkımızda </span><button type="button" class="screen-reader-only clear-button-style toggle-submenu" aria-label="Alt menüyü göster Hakkımızda " aria-expanded="false" onclick="if ($(this).attr('aria-expanded') == 'true') event.stopImmediatePropagation(); $(this).closest('.imLevel').trigger(jQuery.Event($(this).attr('aria-expanded') == 'false' ? 'mouseenter' : 'mouseleave', { originalEvent: event } ));">▼</button></div></div><ul data-original-position="open-bottom" class="open-bottom" style="" >
 	<li class="imMnMnFirst imPage" data-link-paths=",/sezenmedya/hakkimizda-iletisim.html">
 <div class="label-wrapper">
 <div class="label-inner-wrapper">
@@ -1001,14 +994,7 @@ Hakkımızda &amp; İletişim		</a>
 Reklam &amp; Sponsorlar		</a>
 </div>
 </div>
-	</li></ul></li><li class="imMnMnLast imPage" data-link-paths=",/sezenmedya/site-haritasi.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="../site-haritasi.html">
-Site Haritası		</a>
-</div>
-</div>
-	</li></ul></nav></div><a id="imStickyBar_imMenuObject_01_after_menu" class="screen-reader-only-even-focused"></a><!-- UNSEARCHABLE END --><script>
+	</li></ul></li></ul></nav></div><a id="imStickyBar_imMenuObject_01_after_menu" class="screen-reader-only-even-focused"></a><!-- UNSEARCHABLE END --><script>
 var imStickyBar_imMenuObject_01_settings = {
 	'menuId': 'imStickyBar_imMenuObject_01',
 	'responsiveMenuEffect': 'push',
