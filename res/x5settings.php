@@ -7,16 +7,16 @@
 */
 
 $imSettings['general'] = array(
-	'site_id' => 'DB2D99C1E99897D2D554882E0D604F57',
-	'url' => 'http://localhost/',
-	'homepage_url' => 'http://localhost/index.php',
-	'icon' => 'http://localhost/favImage.png',
+	'site_id' => 'FA55EDDAB7EF8F75FD2C1E21577C805B',
+	'url' => 'https://dodalgic.github.io/sezenmedya/',
+	'homepage_url' => 'https://dodalgic.github.io/sezenmedya/index.php',
+	'icon' => 'https://dodalgic.github.io/sezenmedya/favImage.png',
 	'version' => '2026.2.2.0',
 	'sitename' => 'Sezen Medya – Canlı TV, Radyo ve Hesaplama Araçları',
 	'lang_code' => 'tr-TR',
 	'rtl' => false,
 	'public_folder' => '',
-	'salt' => '3ef9otuflfmlfqi1itr15qa7by6hsonqi3jjousi7df99yttznlsk4nc4',
+	'salt' => 'ctmqqtvnmtvejo4t36pt5kxoyud5vg83704',
 	'common_email_sender_addres' => 'mail@sezenmedya.com.tr',
 	'enable_sender_header' => true,
 	'date_format' => 'dd/MM/yy',
@@ -54,17 +54,17 @@ $imSettings['password_policy'] = array(
 |	Captcha
 |-------------------------------
 */ImTopic::$captcha_code = "		<div class=\"x5captcha-wrap\">
-			<label for=\"1wr3f1zb-imCpt\">Kontrol kelimesi:</label><br />
-			<input type=\"text\" id=\"1wr3f1zb-imCpt\" class=\"imCpt\" name=\"imCpt\" maxlength=\"5\" />
+			<label for=\"8ks26sqr-imCpt\">Kontrol kelimesi:</label><br />
+			<input type=\"text\" id=\"8ks26sqr-imCpt\" class=\"imCpt\" name=\"imCpt\" maxlength=\"5\" />
 		</div>
 ";
 
 
 $imSettings['admin'] = array(
 	'icon' => 'admin/images/logo_6egw3wvq.webp',
-	'notification_public_key' => 'BBqnFTzRRtkQG2rLfYgLjPX6bpO0DaDYycxVoXfDcs22TvZmfagon5uaoplZ6p3-Pjv6aG7KZkCQkqccZnEnhVY',
-	'notification_private_key' => 'efMD3JjXjipQy3l_CIzXVNipeH1L9rgIVYPo4Gf1QYA',
-	'notification_dbprefix' => 'w5_9jip3mc6_notifications_',
+	'notification_public_key' => 'BEJmtSmO1vhZBjhahVphQuanJqP9OonHt0ZziMk8lhP-fNeCMRmhU69KDFaPQ5T-3zoA34mXG8hBw4kiuDxEbuk',
+	'notification_private_key' => 'TJ7INW0paSHLpSBFjq76-Miae9ztYR-okYQllhKGP-g',
+	'notification_dbprefix' => 'w5_jtwm6hrn_notifications_',
 	'enable_notifications' => false,
 	'theme' => 'orange',
 	'extra-dashboard' => array(),
@@ -87,7 +87,7 @@ $couponData['products'] = array();
 $ecommerce->setPublicFolder('');
 $ecommerce->setCouponData($couponData);
 $ecommerce->setSettings(array(
-	'page_url' => 'http://localhost/',
+	'page_url' => 'https://dodalgic.github.io/sezenmedya/',
 	'force_sender' => false,
 	'mail_btn_css' => 'display: inline-block; text-decoration: none; color: rgba(40, 31, 26, 1); background-color: rgba(234, 226, 220, 1); padding: 10px 30px 10px 30px; border: solid; border-block-color: transparent transparent; border-inline-color: transparent transparent; border-width: 3px; border-radius: 5px; ',
 	'email_opening' => 'Değerli Müşterimiz,<br /><br />Siparişiniz için teşekkür ederiz. Ödemenizi beklediğimizi hatırlatırız.<br /><br />Aşağıda sipariş ettiğiniz ürünlerin listesini, fatura ve nakliye detaylarını ve ödemeyi tamamlama talimatlarını bulacaksınız.',
@@ -132,7 +132,7 @@ $ecommerce->setCommentsData(array(
 	'enabled' => false,
 	'type' => "websitex5",
 	'db' => '',
-	'table' => 'w5_9jip3mc6_products_comments',
+	'table' => 'w5_jtwm6hrn_products_comments',
 	'prefix' => 'x5productPage_',
 	'comment_type' => "commentandstars"
 ));
