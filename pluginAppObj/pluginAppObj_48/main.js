@@ -1,0 +1,1 @@
+function livechat_pluginAppObj_48(code){x5engine.boot.push(function(){$("body").append(unescapeHtml(code))})}function unescapeHtml(safe){return safe.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#039;/g,"'").replace(/<br ?\/?>/g,"\n")}

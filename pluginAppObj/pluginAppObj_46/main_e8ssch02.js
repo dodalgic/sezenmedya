@@ -1,0 +1,1 @@
+function blogwidget_pluginAppObj_46(){x5engine.boot.push(function(){if(1)$("#pluginAppObj_46 .post_title").on("click",function(event){var link="";$(location).attr("href").indexOf("blog/")==-1&&(link+="blog/");link+=$(this).attr("data-link");$(this).attr("href",link);$(this)[0].click();event.stopPropagation()})})}
