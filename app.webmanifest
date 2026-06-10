@@ -1,0 +1,26 @@
+{
+"short_name": "Sezen Medya",
+"name": "Sezen Medya – Canlı TV, Radyo ve Hesaplama Araçları",
+"description": "Sezen Medya, canlı TV ve radyo yayınlarına hızlı erişim, finans ve sağlık odaklı hesaplama araçları, SEO ve web araçları ile dini kaynaklar sunan,  tamamen ücretsiz bir bilgi ve araç platformudur.",
+"icons": [
+{
+"src": "images/pwaIcon512.png",
+"type": "image/png",
+"sizes": "512x512"
+},
+{
+"src": "images/pwaIcon192.png",
+"type": "image/png",
+"sizes": "192x192"
+}
+],
+"id": "/?source=pwa",
+"start_url": "/?source=pwa",
+"display": "standalone",
+"scope": "/",
+"background_color": "#7092BE",
+"theme_color": "#7092BE",
+"lang": "tr-TR",
+"dir": "ltr",
+"prefer_related_applications": false
+}
