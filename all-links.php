@@ -1,0 +1,354 @@
+<?php
+/**
+ * Sezen Medya - Dinamik Site Haritası (Tam Otomatik + Auto-Height)
+ * WebsiteX5 Pro menüsü + x5blog.js blog yazılarını otomatik çeker.
+ * iframe içinde otomatik yükseklik ayarı için postMessage gönderir.
+ * cPanel'e yükleyin: /all-links.php
+ */
+
+error_reporting(E_ALL & ~E_NOTICE);
+ini_set('display_errors', 0);
+
+$targetUrl = 'https://dodalgic.github.io/sezenmedya/';
+$blogBaseUrl = 'https://dodalgic.github.io/sezenmedya/blog/';
+$x5blogJsUrl = $blogBaseUrl . 'x5blog.js';
+
+$error = null;
+$sections = [];
+
+/** URL'den içerik çek (cURL + fallback) */
+function getHtmlContent($url) {
+    if (function_exists('curl_init')) {
+        $ch = curl_init();
+        curl_setopt_array($ch, [
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_TIMEOUT => 15,
+            CURLOPT_USERAGENT => 'Mozilla/5.0 (compatible; SezenMedyaBot/1.0)',
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_ENCODING => ''
+        ]);
+        $html = curl_exec($ch);
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        return ($code === 200 && strlen($html) > 50) ? $html : false;
+    } elseif (ini_get('allow_url_fopen')) {
+        $ctx = stream_context_create(['http' => ['timeout' => 15, 'user_agent' => 'Mozilla/5.0']]);
+        $html = @file_get_contents($url, false, $ctx);
+        return ($html !== false && strlen($html) > 50) ? $html : false;
+    }
+    return false;
+}
+
+function makeAbsoluteUrl($href, $base) {
+    if (preg_match('/^https?:\/\//i', $href)) return $href;
+    if (substr($href, 0, 2) === '//') return 'https:' . $href;
+    if ($href === '#' || $href === '') return null;
+    if (substr($href, 0, 1) === '/') return rtrim($base, '/') . $href;
+    return rtrim($base, '/') . '/' . ltrim($href, '/');
+}
+
+// ✅ YARDIMCI: Alt menülere (<ul>) girmeden etiket bul
+function findLabel($node) {
+    foreach ($node->childNodes as $child) {
+        if ($child->nodeType !== XML_ELEMENT_NODE) continue;
+        if ($child->nodeName === 'ul' || $child->nodeName === 'li') continue; // Alt menüleri atla
+        if (($child->nodeName === 'span' || $child->nodeName === 'a') && 
+            strpos($child->getAttribute('class'), 'label') !== false && 
+            trim($child->textContent) !== '') {
+            return trim($child->textContent);
+        }
+        $found = findLabel($child);
+        if ($found) return $found;
+    }
+    return null;
+}
+
+function getCategoryName($li) {
+    return findLabel($li);
+}
+
+// ✅ YARDIMCI: Alt menülere (<ul>) girmeden ilk linki bul
+function findFirstLink($node) {
+    foreach ($node->childNodes as $child) {
+        if ($child->nodeType !== XML_ELEMENT_NODE) continue;
+        if ($child->nodeName === 'ul') continue; // Alt menüleri atla
+        if ($child->nodeName === 'a') {
+            $h = trim($child->getAttribute('href'));
+            if ($h && $h !== '#') {
+                return ['name' => htmlspecialchars(trim($child->textContent) ?: 'Sayfa', ENT_QUOTES, 'UTF-8'), 'url' => $h];
+            }
+        }
+        $found = findFirstLink($child);
+        if ($found) return $found;
+    }
+    return null;
+}
+
+function extractLink($el) {
+    return findFirstLink($el);
+}
+
+function parseMainMenu($html, $base) {
+    $dom = new DOMDocument();
+    libxml_use_internal_errors(true);
+    $dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
+    libxml_clear_errors();
+    $xpath = new DOMXPath($dom);
+    
+    $sel = ['#imHeader_imMenuObject_02_container', '#imStickyBar_imMenuObject_01_container', 'nav.im-menu', '.menu-mobile-animated', '#imMenuObject_02_container'];
+    $menu = null;
+    foreach ($sel as $s) {
+        $nodes = $xpath->query($s);
+        if ($nodes && $nodes->length > 0) { $menu = $nodes->item(0); break; }
+    }
+    if (!$menu) {
+        foreach ($dom->getElementsByTagName('ul') as $ul) {
+            if ($ul->getElementsByTagName('li')->length > 2) { $menu = $ul; break; }
+        }
+    }
+    if (!$menu) return [];
+    
+    $res = [];
+    
+    // ✅ DÜZELTME: Menünün ana <ul> etiketini bul
+    $menuUl = null;
+    if ($menu->nodeName === 'ul') {
+        $menuUl = $menu;
+    } else {
+        foreach ($menu->getElementsByTagName('ul') as $ul) {
+            $menuUl = $ul;
+            break;
+        }
+    }
+    if (!$menuUl) return [];
+
+    // ✅ DÜZELTME: SADECE ana menünün doğrudan <li> çocuklarını al (Tüm alt li'leri değil!)
+    foreach ($menuUl->childNodes as $li) {
+        if ($li->nodeType !== XML_ELEMENT_NODE || $li->nodeName !== 'li') continue;
+        
+        $cat = getCategoryName($li);
+        if (!$cat) continue;
+        
+        $links = [];
+        
+        // Bu <li>'nin alt menüsü (<ul>) var mı?
+        $subUl = null;
+        foreach ($li->childNodes as $child) {
+            if ($child->nodeType === XML_ELEMENT_NODE && $child->nodeName === 'ul') {
+                $subUl = $child;
+                break;
+            }
+        }
+        
+        if ($subUl) {
+            // Alt menüdeki TÜM <li>leri al (iç içe menüler dahil düzleştir)
+            foreach ($subUl->getElementsByTagName('li') as $sub) {
+                $d = extractLink($sub);
+                if ($d) { 
+                    $d['url'] = makeAbsoluteUrl($d['url'], $base); 
+                    // Aynı linkin tekrarını önlemek için URL'yi anahtar olarak kullan
+                    if ($d['url']) $links[$d['url']] = $d; 
+                }
+            }
+        } else {
+            // Alt menü yoksa, kendisi bir linktir
+            $d = extractLink($li);
+            if ($d) { 
+                $d['url'] = makeAbsoluteUrl($d['url'], $base); 
+                if ($d['url']) $links[$d['url']] = $d; 
+            }
+        }
+        
+        if (!empty($links)) $res[$cat] = array_values($links);
+    }
+    return $res;
+}
+
+/** ✅ DÜZELTİLMİŞ x5blog.js Parse */
+function parseBlogPostsFromJs($jsUrl, $blogBase) {
+    $js = getHtmlContent($jsUrl);
+    if (!$js) return [];
+    $posts = [];
+    if (!preg_match('/posts_ids\s*=\s*\[([^\]]+)\]/', $js, $m)) return [];
+    preg_match_all('/"([^"]+)"/', $m[1], $ids);
+    if (empty($ids[1])) return [];
+    
+    foreach ($ids[1] as $id) {
+        $pat = preg_quote($id, '/');
+        if (!preg_match('/posts\["' . $pat . '"\]\s*=\s*\{/', $js, $start, PREG_OFFSET_CAPTURE)) continue;
+        $block = substr($js, $start[0][1] + strlen($start[0][0]), 5000);
+        
+        $title = $slug = $cat = '';
+        if (preg_match('/\btitle\s*:\s*"([^"]+)"/', $block, $t)) $title = $t[1];
+        elseif (preg_match("/\btitle\s*:\s*'([^']+)'/", $block, $t)) $title = $t[1];
+        if (preg_match('/\bslug\s*:\s*"([^"]+)"/', $block, $s)) $slug = $s[1];
+        elseif (preg_match("/\bslug\s*:\s*'([^']+)'/", $block, $s)) $slug = $s[1];
+        if (preg_match('/\bcategory\s*:\s*"([^"]+)"/', $block, $c)) $cat = $c[1];
+        elseif (preg_match("/\bcategory\s*:\s*'([^']+)'/", $block, $c)) $cat = $c[1];
+        
+        if ($title && $slug) {
+            $posts[] = [
+                'name' => htmlspecialchars(trim($title), ENT_QUOTES, 'UTF-8'),
+                'url'  => $blogBase . '?' . $slug,
+                'category' => htmlspecialchars(trim($cat) ?: 'Genel', ENT_QUOTES, 'UTF-8')
+            ];
+        }
+    }
+    return $posts;
+}
+
+/** Fallback: Blog ana sayfasından link çek */
+function parseBlogFallback($url) {
+    $html = getHtmlContent($url);
+    if (!$html) return [];
+    $dom = new DOMDocument();
+    libxml_use_internal_errors(true);
+    $dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
+    libxml_clear_errors();
+    $res = [];
+    foreach ($dom->getElementsByTagName('a') as $a) {
+        $h = $a->getAttribute('href');
+        $t = trim($a->textContent);
+        if ($t && strlen($t) > 5 && strpos($h, '?') !== false) {
+            $abs = makeAbsoluteUrl($h, $url);
+            // Tekrarlayan blog linklerini önlemek için URL'yi anahtar yap
+            if ($abs) $res[$abs] = ['name' => htmlspecialchars($t, ENT_QUOTES, 'UTF-8'), 'url' => $abs, 'category' => 'Genel'];
+        }
+    }
+    return array_values($res);
+}
+
+// ---------- ANA İŞLEM ----------
+try {
+    $html = getHtmlContent($targetUrl);
+    if (!$html) throw new Exception('Siteye bağlanılamadı.');
+    
+    $sections = parseMainMenu($html, $targetUrl);
+    
+    $blogPosts = parseBlogPostsFromJs($x5blogJsUrl, $blogBaseUrl);
+    if (empty($blogPosts)) $blogPosts = parseBlogFallback($blogBaseUrl);
+    
+    if (!empty($blogPosts)) {
+        $byCat = [];
+        foreach ($blogPosts as $p) $byCat[$p['category']][] = $p;
+        foreach ($byCat as $c => $list) $sections['📝 Blog: ' . $c] = $list;
+    }
+    if (empty($sections)) throw new Exception('Bağlantı bulunamadı.');
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
+?>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sezen Medya - Site Haritası</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f4f6f9; font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.5; color: #1e2a3e; padding: 30px 20px; }
+.container { max-width: 1200px; margin: 0 auto; background: #fff; border-radius: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); padding: 30px 28px 50px; }
+.header { text-align: center; margin-bottom: 35px; border-bottom: 1px solid #e9edf2; padding-bottom: 20px; }
+.header h1 { font-size: 2.2rem; font-weight: 600; background: linear-gradient(135deg, #1e3c72, #2a5298); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.header p { color: #5d7184; margin-top: 8px; }
+.info-bar { background: #f0f4fa; border-radius: 60px; display: inline-flex; align-items: center; gap: 12px; padding: 8px 20px; margin-top: 18px; font-size: 0.85rem; flex-wrap: wrap; justify-content: center; }
+.info-bar span { background: white; padding: 4px 12px; border-radius: 50px; color: #1a5d9c; }
+.section { margin-bottom: 42px; }
+.section-title { font-size: 1.7rem; font-weight: 600; padding: 8px 0 12px 18px; border-left: 5px solid #1a73e8; margin-bottom: 20px; background: linear-gradient(90deg, #fbfdff, transparent); display: flex; align-items: baseline; gap: 8px; }
+.count-badge { background: #e9ecf3; font-size: 0.75rem; padding: 4px 12px; border-radius: 40px; color: #2c3e66; }
+.link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.link-card { background: #fff; border: 1px solid #eef2f8; border-radius: 16px; transition: all 0.2s; }
+.link-card a { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1f2a48; font-weight: 500; padding: 12px 18px; border-radius: 16px; transition: background 0.2s; }
+.link-card a:hover { background: #f1f5fe; color: #0b57d0; border-color: #cbdffc; transform: translateX(3px); }
+.link-icon { font-size: 1.3rem; min-width: 30px; text-align: center; }
+.error-box { background: #fee9e6; border-left: 5px solid #d93025; padding: 20px; border-radius: 18px; margin: 30px 0; color: #b3261e; }
+.footer { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #eef2f8; font-size: 0.8rem; color: #6c7e97; }
+@media (max-width: 640px) { .container { padding: 20px 16px; } .section-title { font-size: 1.4rem; } .link-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🗺️ Sezen Medya · Site Haritası</h1>
+        <p>Tüm kategoriler ve <strong>blog yazıları</strong> otomatik listelenir</p>
+        <div class="info-bar">
+            📅 <?php echo date('d.m.Y H:i'); ?>
+            <span>⚡ Otomatik & Dinamik</span>
+        </div>
+    </div>
+
+    <?php if ($error): ?>
+        <div class="error-box">❌ <strong>Hata:</strong> <?php echo htmlspecialchars($error); ?></div>
+    <?php elseif (!empty($sections)): 
+        $total = 0; foreach ($sections as $l) $total += count($l); ?>
+        <div style="text-align:right; margin-bottom:20px; font-size:0.85rem; color:#4a627a;">
+            📌 Toplam <strong><?php echo $total; ?></strong> bağlantı · <strong><?php echo count($sections); ?></strong> bölüm
+        </div>
+        <?php foreach ($sections as $category => $links): ?>
+            <div class="section">
+                <div class="section-title">
+                    <?php 
+                        $icon = '📁';
+                        $cl = mb_strtolower($category, 'UTF-8');
+                        if (strpos($cl, 'radyo') !== false) $icon = '📻';
+                        elseif (strpos($cl, 'tv') !== false) $icon = '📺';
+                        elseif (strpos($cl, 'hesaplama') !== false) $icon = '🧮';
+                        elseif (strpos($cl, 'seo') !== false) $icon = '📈';
+                        elseif (strpos($cl, 'din') !== false || strpos($cl, 'kuran') !== false) $icon = '🕌';
+                        elseif (strpos($cl, 'finans') !== false) $icon = '💹';
+                        elseif (strpos($cl, 'blog') !== false) $icon = '📝';
+                        echo $icon . ' ' . htmlspecialchars($category);
+                    ?>
+                    <span class="count-badge"><?php echo count($links); ?> sayfa</span>
+                </div>
+                <div class="link-grid">
+                    <?php foreach ($links as $link): ?>
+                        <div class="link-card">
+                            <a href="<?php echo htmlspecialchars($link['url']); ?>" target="_blank" rel="noopener noreferrer">
+                                <span class="link-icon">🔗</span>
+                                <span class="link-text"><?php echo $link['name']; ?></span>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <div class="error-box">⚠️ Henüz gösterilecek bağlantı bulunamadı.</div>
+    <?php endif; ?>
+
+    <div class="footer">
+        © <?php echo date('Y'); ?> Sezen Medya - Otomatik güncellenen site haritası<br>
+       Her ziyarette güncel
+    </div>
+</div>
+
+<!-- ✅ OTOMATİK YÜKSEKLİK BİLDİRİM SCRIPTİ -->
+<script>
+(function() {
+    function sendHeight() {
+        const h = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight
+        );
+        try { parent.postMessage({ type: 'resize', height: h }, '*'); } catch(e) {}
+    }
+
+    window.addEventListener('load', sendHeight);
+    if (document.readyState === 'complete' || document.readyState === 'interactive') setTimeout(sendHeight, 100);
+
+    window.addEventListener('message', function(e) {
+        if (e.data && e.data.type === 'recalc') sendHeight();
+    });
+
+    const observer = new MutationObserver(sendHeight);
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+
+    setTimeout(sendHeight, 500);
+    setTimeout(sendHeight, 1500);
+})();
+</script>
+</body>
+</html>
