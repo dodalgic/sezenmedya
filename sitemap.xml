@@ -1,403 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 	<url>
-		<loc>http://localhost/index.html</loc>
-		<lastmod>2026-06-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/hakkimizda-iletisim.html</loc>
-		<lastmod>2026-06-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/reklam-ve-sponsorluk-bilgileri.html</loc>
-		<lastmod>2026-06-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/gizlilik-politikasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/cerez-politikasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/kvkk-aydinlatma-metni.html</loc>
-		<lastmod>2026-06-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/gunluk-getiri-hesaplayici.html</loc>
-		<lastmod>2026-06-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/donemsel-faiz-karsilastirma.html</loc>
-		<lastmod>2026-06-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/para-biriktirme-hesaplayicisi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/index.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/hisse-degeri-hesaplama.html</loc>
+		<loc>https://dodalgic.github.io/sezenmedya/hakkimizda-iletisim.html</loc>
 		<lastmod>2026-06-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/11-yontemle-ile-hisse-ederi.html</loc>
+		<loc>https://dodalgic.github.io/sezenmedya/reklam-ve-sponsorluk-bilgileri.html</loc>
 		<lastmod>2026-06-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/yakit-maliyeti-hesaplayici.html</loc>
+		<loc>https://dodalgic.github.io/sezenmedya/gizlilik-politikasi.html</loc>
 		<lastmod>2026-06-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/yuzde-degisim-hesaplama.html</loc>
+		<loc>https://dodalgic.github.io/sezenmedya/cerez-politikasi.html</loc>
 		<lastmod>2026-06-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/kurban-eti-hesaplama.html</loc>
+		<loc>https://dodalgic.github.io/sezenmedya/kvkk-aydinlatma-metni.html</loc>
 		<lastmod>2026-06-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/slow-pop-radyo.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/gunluk-getiri-hesaplayici.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/romantik-radyo.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/donemsel-faiz-karsilastirma.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/islami-radyo.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/para-biriktirme-hesaplayicisi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/pop-radyo.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/hisse-degeri-hesaplama.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/turkce-canli-tv-izle.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/11-yontemle-ile-hisse-ederi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/ingilizce-canli-tv-izle.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/yakit-maliyeti-hesaplayici.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/uk-canli-tv-izle.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/yuzde-degisim-hesaplama.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/almanca-canli-tv-izle.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/kurban-eti-hesaplama.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/cevat-faruki-asirler.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/slow-pop-radyo.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/abdussamed-asirler.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/romantik-radyo.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/mustafa-ismail-asirler.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/islami-radyo.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/mustafa-ismail-hatim.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/pop-radyo.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/abdussamed-hatim.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/turkce-canli-tv-izle.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/abdullah-yucel-meal.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/ingilizce-canli-tv-izle.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/hamdi-donduren-meal.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/uk-canli-tv-izle.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/kur-an-i-kerim-den-dualar.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/almanca-canli-tv-izle.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/peygamberimizden-dualar.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/cevat-faruki-asirler.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/dort-buyuk-salavat.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/abdussamed-asirler.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/esma-ul-husna.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/mustafa-ismail-asirler.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/namaz-dualari.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/mustafa-ismail-hatim.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/kenzul-ars-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/abdussamed-hatim.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/veysel-karani-munacati.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/abdullah-yucel-meal.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/sekine-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/hamdi-donduren-meal.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/tercuman-i-ism-i-azam-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/kur-an-i-kerim-den-dualar.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/ismi-azam-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/peygamberimizden-dualar.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/celcelutiye-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/dort-buyuk-salavat.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/evrad-i-kudsiye-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/esma-ul-husna.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/hizbu-n-nasr-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/namaz-dualari.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/hizbu-l-hifz-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/kenzul-ars-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/celalet-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/veysel-karani-munacati.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/besmele-i-serife-duasi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/sekine-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/seo-slug-olusturucu.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/tercuman-i-ism-i-azam-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/metin-karakter-sayici.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/ismi-azam-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/buyuk-kucuk-harf-cevirici.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/celcelutiye-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/alt-alta-kelimeleri-yan-yana-yazma-araci.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/evrad-i-kudsiye-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/enpara-hesap-acma-rehberi.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/hizbu-n-nasr-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/turknet-1-ay-ucretsiz-internet-firsati.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/hizbu-l-hifz-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/sigortam-net-500-tl-indirim-firsati.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/celalet-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/sayfa-404.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/besmele-i-serife-duasi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/cocuk-vucut-kitle-indeksi-hesaplayici.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/seo-slug-olusturucu.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/gunluk-protein-karbonhidrat-ve-yag-ihtiyaci-hesaplama.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/metin-karakter-sayici.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/vucut-kitle-indeksi-bmi-hesaplayici.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/buyuk-kucuk-harf-cevirici.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/yas-hesaplayici.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/alt-alta-kelimeleri-yan-yana-yazma-araci.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/tarih-hesaplayici.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/enpara-hesap-acma-rehberi.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/boya-ihtiyaci-hesaplayici.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/turknet-1-ay-ucretsiz-internet-firsati.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/gunluk-kalori-ihtiyaci-hesaplayici.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/sigortam-net-500-tl-indirim-firsati.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/kalori-yakimi-hesaplayici.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/sayfa-404.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/hesaplama-bolumu.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/cocuk-vucut-kitle-indeksi-hesaplayici.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/medya-bolumu.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/gunluk-protein-karbonhidrat-ve-yag-ihtiyaci-hesaplama.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/seo-bolumu.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/vucut-kitle-indeksi-bmi-hesaplayici.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/din-bolumu.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/yas-hesaplayici.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/tavsiye-bolumu.html</loc>
-		<lastmod>2026-06-11</lastmod>
+		<loc>https://dodalgic.github.io/sezenmedya/tarih-hesaplayici.html</loc>
+		<lastmod>2026-06-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/hakkimizda-bolumu.html</loc>
+		<loc>https://dodalgic.github.io/sezenmedya/boya-ihtiyaci-hesaplayici.html</loc>
 		<lastmod>2026-06-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
