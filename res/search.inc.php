@@ -6,7 +6,7 @@
 $imSettings['search']['general'] = array(
 	'menu_position' => 'left',
 	'defaultScope' => array(
-		'0' => 'index.php',
+		'0' => 'index.html',
 		'10' => 'hakkimizda-iletisim.html',
 		'11' => 'reklam-ve-sponsorluk-bilgileri.html',
 		'12' => 'gizlilik-politikasi.html',
@@ -64,7 +64,15 @@ $imSettings['search']['general'] = array(
 		'79' => 'vucut-kitle-indeksi-bmi-hesaplayici.html',
 		'80' => 'yas-hesaplayici.html',
 		'81' => 'tarih-hesaplayici.html',
-		'82' => 'boya-ihtiyaci-hesaplayici.html'
+		'82' => 'boya-ihtiyaci-hesaplayici.html',
+		'83' => 'gunluk-kalori-ihtiyaci-hesaplayici.html',
+		'84' => 'kalori-yakimi-hesaplayici.html',
+		'85' => 'hesaplama-bolumu.html',
+		'86' => 'medya-bolumu.html',
+		'87' => 'seo-bolumu.html',
+		'88' => 'din-bolumu.html',
+		'89' => 'tavsiye-bolumu.html',
+		'90' => 'hakkimizda-bolumu.html'
 	),
 	'extendedScope' => array(
 	)
