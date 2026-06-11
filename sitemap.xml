@@ -7,54 +7,6 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://localhost/blog/</loc>
-		<lastmod>2026-06-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/blog/?kur-an-daki-emir-ve-yasaklar</loc>
-		<lastmod>2026-06-10</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/blog/?islam-hukuku-ve-turk-medeni-kanunu-kapsaminda-miras</loc>
-		<lastmod>2026-06-09</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/blog/?finans-piyasalarinda-temel-analiz-ve-teknik-analiz</loc>
-		<lastmod>2026-06-09</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/blog/?islamiyette-faiz-riba-kavramlarinin-geleneksel-ve-modern-goruslerle-analizi</loc>
-		<lastmod>2026-06-09</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/blog/?iislamiyette-zekat-kavraminin-modern-ve-geleneksel-goruslerle-analizi</loc>
-		<lastmod>2026-06-09</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/blog/?mutlak-getirili-pasif-gelir-icin-en-iyi-yontemler</loc>
-		<lastmod>2026-06-09</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://localhost/blog/?gunluk-faiz-getiri-hesaplayici-basit-bilesik-ve-duzenli-katki</loc>
-		<lastmod>2026-06-09</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
 		<loc>http://localhost/hakkimizda-iletisim.html</loc>
 		<lastmod>2026-06-11</lastmod>
 		<changefreq>monthly</changefreq>
