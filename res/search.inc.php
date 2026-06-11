@@ -64,15 +64,7 @@ $imSettings['search']['general'] = array(
 		'79' => 'vucut-kitle-indeksi-bmi-hesaplayici.html',
 		'80' => 'yas-hesaplayici.html',
 		'81' => 'tarih-hesaplayici.html',
-		'82' => 'boya-ihtiyaci-hesaplayici.html',
-		'83' => 'gunluk-kalori-ihtiyaci-hesaplayici.html',
-		'84' => 'kalori-yakimi-hesaplayici.html',
-		'85' => 'hesaplama-bolumu.html',
-		'86' => 'medya-bolumu.html',
-		'87' => 'seo-bolumu.html',
-		'88' => 'din-bolumu.html',
-		'89' => 'tavsiye-bolumu.html',
-		'90' => 'hakkimizda-bolumu.html'
+		'82' => 'boya-ihtiyaci-hesaplayici.html'
 	),
 	'extendedScope' => array(
 	)
