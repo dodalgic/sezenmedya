@@ -1,11 +1,11 @@
 {
 	"name": "Sezen Medya – Canlı TV, Radyo ve Hesaplama Araçları Admin",
-	"start_url": "https://dodalgic.github.io/sezenmedya/admin/",
+	"start_url": "http://localhost/admin/",
 	"display": "standalone",
 	"background_color": "#E5E5E5",
 	"theme_color": "#F28D4F",
-	"scope": "https://dodalgic.github.io/sezenmedya/admin/",
+	"scope": "http://localhost/admin/",
 	"icons": [
-		{ "src": "https://dodalgic.github.io/sezenmedya/admin/images/logo_6egw3wvq.webp", "type": "image/png", "sizes": "126x126" }
+		{ "src": "http://localhost/admin/images/logo_6egw3wvq.webp", "type": "image/png", "sizes": "126x126" }
 	]
 }
