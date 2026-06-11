@@ -3,4 +3,4 @@ Disallow: /admin
 Disallow: /captcha
 Disallow: /imemail
 
-Sitemap: https://dodalgic.github.io/sezenmedya/sitemap.xml
+Sitemap: http://localhost/sitemap.xml
