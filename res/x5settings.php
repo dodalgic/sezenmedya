@@ -9,7 +9,7 @@
 $imSettings['general'] = array(
 	'site_id' => 'DB2D99C1E99897D2D554882E0D604F57',
 	'url' => 'http://localhost/',
-	'homepage_url' => 'http://localhost/anasayfa.php',
+	'homepage_url' => 'http://localhost/index.html',
 	'icon' => 'http://localhost/favImage.png',
 	'version' => '2026.2.2.0',
 	'sitename' => 'Sezen Medya – Canlı TV, Radyo ve Hesaplama Araçları',
@@ -54,8 +54,8 @@ $imSettings['password_policy'] = array(
 |	Captcha
 |-------------------------------
 */ImTopic::$captcha_code = "		<div class=\"x5captcha-wrap\">
-			<label for=\"75qol5o2-imCpt\">Kontrol kelimesi:</label><br />
-			<input type=\"text\" id=\"75qol5o2-imCpt\" class=\"imCpt\" name=\"imCpt\" maxlength=\"5\" />
+			<label for=\"zkdyw8yg-imCpt\">Kontrol kelimesi:</label><br />
+			<input type=\"text\" id=\"zkdyw8yg-imCpt\" class=\"imCpt\" name=\"imCpt\" maxlength=\"5\" />
 		</div>
 ";
 
