@@ -10,7 +10,7 @@ if(substr(basename($_SERVER['PHP_SELF']), 0, 11) == "imEmailForm") {
 	$form->setField('Konu', @$_POST['imObjectForm_13_3'], '', false);
 	$form->setField('Mesajınız', @$_POST['imObjectForm_13_4'], '', false);
 	$form->setField('KVKK Onayı', @$_POST['imObjectForm_13_5'], '', false);
-		if(!isset($_POST['imJsCheck']) || $_POST['imJsCheck'] != '6185261E0DD1C5ECDBD32E63390222F5' || (isset($_POST['imSpProt']) && $_POST['imSpProt'] != ""))
+		if(!isset($_POST['imJsCheck']) || $_POST['imJsCheck'] != '14FC093C396DFE480F5773173566C49B' || (isset($_POST['imSpProt']) && $_POST['imSpProt'] != ""))
 			$errorMessage = "JavaScript'i aktifleştirmelisiniz!";
 		$form->mailToOwner('mail@sezenmedya.com.tr', '', '', 'Yeni iletişim', "Web sitemden yeni veriler alındı:", false);
 		if ($errorMessage == '') {
